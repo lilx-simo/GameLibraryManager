@@ -98,8 +98,12 @@ namespace GameLibraryManager
 
         public Player FindPlayerByUsername(string username)
         {
+            if (string.IsNullOrWhiteSpace(username))
+                throw new ArgumentException("Username is required.", nameof(username)); // added throw exception
+
             return _players.FirstOrDefault(p =>
                 p.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
+
         }
 
         public List<PlayerGameStats> GetTopPlayersByHours()
