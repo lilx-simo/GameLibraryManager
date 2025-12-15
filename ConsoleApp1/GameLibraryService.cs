@@ -40,7 +40,7 @@ namespace GameLibraryManager
 
             _players.Add(player);
             JsonStorage.SaveList(_playersFile, _players);
-            _logger.Log("Added player " + player.Username + " (Id=" + player.Id + ").");
+            _logger.Log($"Added player {player.Username} (Id={player.Id}).");
         }
 
         public void AddGame(Game game)
