@@ -27,7 +27,7 @@ namespace GameLibraryManager
             }
             catch (Exception)
             {
-                // If file is corrupt or invalid, return empty list.
+                // corrupt or invalid return empty list.
                 return new List<T>();
             }
         }
