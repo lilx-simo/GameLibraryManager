@@ -93,8 +93,7 @@ namespace GameLibraryManager
 
         public Player FindPlayerById(int id)
         {
-            if (playerId <= 0) throw new ArgumentOutOfRangeException(nameof(playerId));
-            if (gameId <= 0) throw new ArgumentOutOfRangeException(nameof(gameId));
+            if (id <= 0) throw new ArgumentOutOfRangeException(nameof(id));
             // this will return null if not found :(
             return _players.FirstOrDefault(p => p.Id == id);
         }
